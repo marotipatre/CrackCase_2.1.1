@@ -1,0 +1,8 @@
+.nav-link{
+    color: white;
+    transition: color .5s ease-out, text-decoration .5s ease-out;
+}
+.nav-link:hover{
+    color: rgb(1, 255, 242);
+    text-decoration: underline;
+}
