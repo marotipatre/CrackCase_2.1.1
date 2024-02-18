@@ -23,6 +23,40 @@ const userSchema = new mongoose.Schema({
     },
     bio:{
         type:String
-    }
+    },
+    avatar:{
+        type:String,
+        default:""
+    },
+    userProfile:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"UserProfile"
+    },
+    links:[{
+        type:String
+    }],
+    blogs:[{
+        title:{
+            type:String
+        },
+        description:{
+            type:String
+        },
+        body:{
+            type:String
+        },
+        multimedia:[{
+            type:String
+        }],
+        like:{
+            type:Number
+        },
+        comments:[{
+            type:String
+        }],
+        links:[{
+            type:String
+        }]
+    }]
 },{timestamps:true})
 export const User = mongoose.model("User",userSchema)
