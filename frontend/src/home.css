@@ -1,0 +1,6 @@
+.text{
+    background-color: red;
+    .second{
+        background-color: green;
+    }
+}

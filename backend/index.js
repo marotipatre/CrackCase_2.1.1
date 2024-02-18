@@ -1,9 +1,13 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors'
 import ConnectDb from './src/db/connectDB.js'
+import {UserRouter} from './src/routes/user.routes.js'
 dotenv.config()
 const app = express()
 app.use(express.json())
+app.use(cors())
+app.use("/api/v1/user", UserRouter);
 try {
     ConnectDb().then(()=>{
         app.listen(5000,()=>{
