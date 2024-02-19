@@ -38,7 +38,7 @@ const LoginForm = () => {
       // Additional logic after successful login, if needed
       console.log("User logged in successfully!", response);
       setIsLoggedIn(true);
-      navigate("/");
+      navigate("/investors");
     } catch (error) {
       alert(error.message);
       console.error("Error logging in:", error.message);

@@ -1,0 +1,62 @@
+/* fundraising.css */
+
+/* Wrapper for fundraising posts */
+.fundraising-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Individual fundraising post container */
+  .fundraising-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Custom card styles */
+  .custom-card {
+    width: 40rem;
+    background-color: #f0f0f0; /* Change to desired background color */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* User profile icon */
+  .donate-icon {
+    color: #ff6600; /* Change to desired icon color */
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  /* Username styles */
+  .username {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Post text styles */
+  .custom-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Tag styles */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual tag style */
+  .tag {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #ff6600; /* Change to desired tag background color */
+    color: #fff; /* Change to desired tag text color */
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  
