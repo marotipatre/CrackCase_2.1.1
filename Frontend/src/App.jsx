@@ -5,6 +5,7 @@ import { LoginContext } from './context/LoginContext.js'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import './App.css'
 import { ChakraProvider } from '@chakra-ui/react'
+import Investors from './components/Investors.jsx';
 
 
 const router = createBrowserRouter([
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/feed",
         element:<Feed/>
+      },
+      {
+        path:"/investors",
+        element:<Investors/>
       }
     ],
   },

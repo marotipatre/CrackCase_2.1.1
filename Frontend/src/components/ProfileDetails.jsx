@@ -18,10 +18,11 @@ const styles = {
     border: ".3rem solid white",
   },
   profileImageContainer: {
-    backgroundColor: "black",
+    // background: rgb(238,174,202);
+    background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
     display: "flex",
     justifyContent: "center",
-    backgroundImage: `url("https://t3.ftcdn.net/jpg/00/32/43/82/360_F_32438200_oMeluL7Q2cR50GALrJQMCwgYImFK7hkl.jpg")`,
+    // backgroundImage: `url("https://t3.ftcdn.net/jpg/00/32/43/82/360_F_32438200_oMeluL7Q2cR50GALrJQMCwgYImFK7hkl.jpg")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "15rem",
