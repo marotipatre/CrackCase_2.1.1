@@ -4,6 +4,8 @@ import JoditEditor from "jodit-react";
 import { toast } from "react-toastify";
 import { createBlogPost } from "../../controllers/CreateBlogController.js";
 import Spinner from "../components/Spinner.jsx";
+import "../styles/blog.css";
+
 export default function CreateBlog(){
     const editor = useRef(null);
     const [post, setPost] = useState({
@@ -71,87 +73,76 @@ export default function CreateBlog(){
   
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-400 to-purple-600 flex justify-center items-center">
-        <Card className="max-w-md w-full rounded-md overflow-hidden shadow-md bg-white">
-          <CardBody className="p-6">
-            <h3 className="text-xl font-semibold mb-4">Write Here!</h3>
-            <Form onSubmit={(e)=>createPost(e)}>
-              <div className="my-3">
-                <Input
-                  type="text"
-                  id="title"
-                  placeholder="Enter here"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-400 mb-4"
-                  name="title"
-                  value={post.title}
-                  onChange={fieldChanged}
-                />
-              </div>
-              <div className="my-3">
-                <Input
-                  type="text"
-                  id="category"
-                  placeholder="Enter category"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-400 mb-4"
-                  name="category"
-                  value={post.category}
-                  onChange={fieldChanged}
-                />
-              </div>
-              <div className="my-3">
-                <Input
-                  type="text"
-                  id="category"
-                  placeholder="Enter content"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-400 mb-4"
-                  name="content"
-                  onChange={fieldChanged}
-                />
-              </div>
-              <div className="my-3">
-                <Input
-                  type="text"
-                  id="tags"
-                  placeholder="Enter tags (comma-separated)"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-400 mb-4"
-                  name="tags"
-                  value={post.tags}
-                  onChange={fieldChanged}
-                />
-              </div>
-  
-              <Container className="text-center">
-                <Button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-blue-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out"
-                >
-                  Create Post
-                </Button>
-  
-                <Button
-                  className="ms-2"
-                  color="danger"
-                  onClick={() =>
-                    setPost({
-                      title: "",
-                      content: "",
-                      category: "",
-                      tags: "",
-                    })
-                  }
-                >
-                  Reset Content
-                </Button>
-  
-                {loading && (
-                  <div className="flex justify-center w-full my-3">
-                    <Spinner />
-                  </div>
-                )}
-              </Container>
-            </Form>
-          </CardBody>
-        </Card>
+      <div className="custom-card">
+        <div className="custom-card-body">
+          <h3 className="text-xl font-semibold mb-4">Write Here!</h3>
+          <form onSubmit={createPost}>
+            <div className="my-3">
+              <input
+                type="text"
+                id="title"
+                placeholder="Enter title"
+                className="custom-input"
+                name="title"
+                value={post.title}
+                onChange={fieldChanged}
+              />
+            </div>
+            <div className="my-3">
+              <input
+                type="text"
+                id="category"
+                placeholder="Enter category"
+                className="custom-input"
+                name="category"
+                value={post.category}
+                onChange={fieldChanged}
+              />
+            </div>
+            <div className="my-3">
+              <textarea
+                id="content"
+                placeholder="Enter content"
+                className="custom-textarea"
+                name="content"
+                value={post.content}
+                onChange={fieldChanged}
+              />
+            </div>
+            <div className="my-3">
+              <input
+                type="text"
+                id="tags"
+                placeholder="Enter tags (comma-separated)"
+                className="custom-input"
+                name="tags"
+                value={post.tags}
+                onChange={fieldChanged}
+              />
+            </div>
+
+            <div className="custom-button-container">
+              <button
+                type="submit"
+                disabled={loading}
+                className="custom-button"
+              >
+                Create Post
+              </button>
+              <button
+                type="button"
+                className="custom-button"
+                onClick={() =>
+                  setPost({ title: "", content: "", category: "", tags: "" })
+                }
+              >
+                Reset Content
+              </button>
+              {loading && <Spinner />}
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
     );
   };
