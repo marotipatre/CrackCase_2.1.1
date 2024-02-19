@@ -9,10 +9,11 @@ import SignUp from './SignUp.jsx'
 import ProfileDetails from './ProfileDetails.jsx'
 import EditProfile from './EditProfile.jsx'
 import Blog from './Blog.jsx'
+import CreateBlog from './CreateBlog.jsx'
 import Post from './Post.jsx'
 import AllPosts from './AllPosts.jsx' 
 import Feed from './Feed.jsx'
 
 
 
-export {Home, AboutUs, ContactUs, Layout, Navigation, NotFound, LoginForm, SignUp, ProfileDetails, EditProfile, Blog, Post, AllPosts, Feed}
+export {Home, AboutUs, ContactUs, Layout, Navigation, NotFound, LoginForm, SignUp, ProfileDetails, EditProfile, Blog, Post, AllPosts, Feed,CreateBlog}

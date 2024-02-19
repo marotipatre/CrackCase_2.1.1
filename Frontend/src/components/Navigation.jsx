@@ -27,10 +27,10 @@ const Navigation = () => {
                             <NavLink to="/feed" className="nav-link nav-link2">Explore</NavLink>
                         </li>
                         <li className="nav-item px-4">
-                            <NavLink to="/feed" className="nav-link nav-link3">About us</NavLink>
+                            <NavLink to="/about" className="nav-link nav-link3">About us</NavLink>
                         </li>
                         <li className="nav-item px-4">
-                            <NavLink to="/feed" className="nav-link nav-link4">Community</NavLink>
+                            <NavLink to="/investors" className="nav-link nav-link4">Investors</NavLink>
                         </li>
                         {isLoggedIn ? (
                             <>
