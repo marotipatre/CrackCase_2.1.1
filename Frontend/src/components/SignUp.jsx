@@ -108,7 +108,7 @@ const SignUp = () => {
               name="password"
               placeholder="Your Password"
               title="Minimum 6 characters at least 1 Alphabet and 1 Number"
-              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+              pattern="^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{6,}$"
               value={password}
               onChange={handlePasswordChange}
               required
@@ -173,37 +173,7 @@ const SignUp = () => {
           >
             <Spinner />
           </div>
-
-          <div className="my-form__actions">
-            <a href="#" className="create-account-link"></a>
-
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                `${isActive ? "active-nav" : null} nav-link`
-              }
-            >
-              <a title="Create Account" className="create-account-link">
-                Already have an account? <strong>Login</strong>
-              </a>
-            </NavLink>
-          </div>
-
-          <div className="divider">
-            <div className="divider-line"></div> Or{" "}
-            <div className="divider-line"></div>
-          </div>
-
-          <div className="socials-row">
-            <a href="/" title="Use Google">
-              <img src={googleLogo} alt="Google" />
-              <span>Continue with Google</span>
-            </a>
-          </div>
         </form>
-      </div>
-      <div className="info-side">
-        <img src={signupimage} alt="signupimage" className="mockup" />
       </div>
     </div>
   );

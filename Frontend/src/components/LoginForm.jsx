@@ -49,18 +49,15 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="form-wrapper">
-      <div className="form-side animate__animated animate__fadeIn">
-        <form className="my-form">
-          <div className="form-welcome-row">
-            <h1>Welcome Back! &#x1F44F;</h1>
-            <h2>Login with your account!</h2>
+    <div class="form-wrapper">
+      <div class="form-side animate_animated animate_fadeIn">
+        <form class="my-form">
+          <div class="form-welcome-row">
+            <h1>Welcome</h1>
+            <h2>Login to your account!</h2>
           </div>
 
-          <div className="text-field">
-            {/* <label htmlFor="email" className="input-label">
-              Email
-            </label> */}
+          <div class="text-field">
             <input
               type="email"
               id="email"
@@ -73,15 +70,14 @@ const LoginForm = () => {
             />
           </div>
 
-          <div className="text-field">
-            {/* <label htmlFor="password">Password</label> */}
+          <div class="text-field">
             <input
               id="password"
               type="password"
               name="password"
               placeholder="Password"
               title="Minimum 6 characters at least 1 Alphabet and 1 Number"
-              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+              pattern="^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{6,}$"
               value={password}
               onChange={handlePasswordChange}
               required
@@ -97,7 +93,7 @@ const LoginForm = () => {
             Login
           </button>
           <div
-            className="spinner"
+            class="spinner"
             style={{
               margin: "auto",
               justifyContent: "center",
@@ -107,36 +103,34 @@ const LoginForm = () => {
             <Spinner />
           </div>
 
-          <div className="my-form__actions">
+          <div class="my-form__actions">
             <NavLink
               to="/Signup"
-              className={({ isActive }) =>
+              class={({ isActive }) =>
                 `${isActive ? "active-nav" : null} nav-link`
-              }
-            >
-              <a title="Create Account" className="create-account-link">
-                Don't have an account? <strong>Sign Up</strong>
-              </a>
-            </NavLink>
-          </div>
-
-          <div className="divider">
-            <div className="divider-line"></div>
-            <span>OR</span>
-            <div className="divider-line"></div>
-          </div>
-          <div className="socials-row">
-            <a href="/" title="Use Google">
-              <img src={googleLogo} alt="Google" />
-              <span>Continue with Google</span>
+          }
+        >
+            <a title="Create Account" class="create-account-link">
+              Don't have an account? <strong>Sign Up</strong>
             </a>
-          </div>
-        </form>
+          </NavLink>
       </div>
-      <div className="info-side">
-        <img src={mockImage} alt="Mock" className="mockup" />
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span>OR</span>
+        <div class="divider-line"></div>
       </div>
-    </div>
+      <div class="socials-row">
+        <a className="socials-sec" href="/" title="Use Google">
+          <img src={googleLogo} alt="Google" />
+          <span>Continue with Google</span>
+        </a>
+      </div>
+    </form>
+  </div >
+</div >
+
   );
 };
 export default LoginForm;
