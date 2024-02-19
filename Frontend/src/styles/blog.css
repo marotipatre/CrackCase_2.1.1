@@ -1,0 +1,57 @@
+/* Custom CSS for the Post Form */
+.min-h-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .custom-card-body {
+    padding: 24px;
+  }
+  
+  .custom-input,
+  .custom-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  .custom-textarea {
+    height: 150px;
+  }
+  
+  .custom-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .custom-button {
+    flex: 1;
+    padding: 12px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3182ce;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #2c5282;
+  }
